@@ -113,3 +113,110 @@ body {
   margin-right: 40px;
   float: left;
 }
+
+.modal_container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.results_background {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.instructions_background {
+  z-index: 200;
+  position: absolute;
+  top: 1;
+  left: 1;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.results_body,
+.instructions_body {
+  border-radius: 10px;
+  position: relative;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  background: #fdf7ec;
+  transform: translate(-50%, -70%);
+}
+
+.results_heading {
+  color: #000;
+  display: flex;
+  text-shadow: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid gray;
+}
+
+.instructions_heading {
+  color: #000;
+  display: flex;
+  text-shadow: none;
+  justify-content: center;
+}
+
+span.results_close,
+span.instructions_start {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+span.results_close:hover,
+span.instructions_start:hover {
+  color: #555;
+  transition: ease-in-out 0.25s;
+}
+
+.results_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: #000;
+  text-shadow: none;
+  border-bottom: 1px solid gray;
+}
+
+.instructions_text {
+  padding: 0 1rem;
+  color: #000;
+  text-shadow: none;
+  text-align: center;
+}
+
+.results_buttons,
+.instructions_buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.results_button,
+.instructions_button {
+  width: 100px;
+  height: 30px;
+  background-color: #f3c77c;
+  border-radius: 5px;
+  font-family: "Special Elite", cursive;
+  cursor: pointer;
+}
+
+.results_button:hover,
+.instructions_button:hover {
+  background-color: #e6bd76;
+  transition: ease-in-out 0.25s;
+}
