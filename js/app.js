@@ -230,3 +230,50 @@ const getSkulls = () => {
   }
   return skullCount;
 }
+
+const lightningOverlay = () => {
+  const div = document.createElement("div");
+  div.setAttribute("id", "lightning");
+  document.body.appendChild(div);
+}
+
+const clearLightning = () => {
+  const element = document.querySelector("#lightning");
+  element.remove();
+}
+
+const allDone = () => {
+  lightningOverlay();
+  playSound("sound/Storm_exclamation.mp3");
+  stopTimer();
+  getResults();
+  showResults();
+}
+
+const youLose = () => {
+  const title = document.querySelector(".results_title")
+  title.innerHTML = 'You Lose!';
+  allDone();
+}
+
+const youWin = () => {
+  const title = document.querySelector(".results_title")
+  title.innerHTML = 'You Win!';
+  allDone();
+}
+
+document.querySelector(".results_close").addEventListener("click", () => {
+  showResults();
+  clearLightning();
+});
+
+document.querySelector(".results_cancel").addEventListener("click", () => {
+  showResults();
+  clearLightning();
+});
+
+document.querySelector(".results_try_again").addEventListener("click", () => {
+  refreshGame();
+  showResults();
+  clearLightning();
+});
