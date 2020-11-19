@@ -17,7 +17,8 @@ body {
 }
 
 body {
-  background: #000 url(../img/spooky-moon.gif);
+  background: #000
+    url("https://media.giphy.com/media/3oz8xF1QzDWjSkQkW4/giphy.gif"); /*url(../img/spooky-moon.gif);*/
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Special Elite", cursive;
@@ -52,7 +53,7 @@ body {
   background: #2e3d49 url(../img/jack.PNG);
   background-size: cover;
   font-size: 0;
-  color: #f3c77c;
+  color: #ac7a25;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -250,4 +251,9 @@ span.instructions_start:hover {
   to {
     opacity: 1;
   }
+}
+
+.fas {
+  color: #e6bd76;
+  text-decoration-thickness: none;
 }
